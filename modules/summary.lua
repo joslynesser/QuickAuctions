@@ -582,14 +582,14 @@ function Summary:CreateGUI()
 			GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT")
 			GameTooltip:SetText(self.tooltip, nil, nil, nil, nil, true)
 			GameTooltip:Show()
-		elseif( self.enchantLink or self.link ) then
+		elseif( self.link ) then
 			if( self.button:IsVisible() ) then
 				GameTooltip:SetOwner(self.button, "ANCHOR_LEFT")
 			else
 				GameTooltip:SetOwner(self, "ANCHOR_LEFT")
 			end
 			
-			GameTooltip:SetHyperlink(self.enchantLink or self.link)
+			GameTooltip:SetHyperlink(self.link)
 			
 			if( self.tooltipData ) then
 				GameTooltip:AddLine(self.tooltipData, 0.90, 0.90, 0.90, 1, true)
